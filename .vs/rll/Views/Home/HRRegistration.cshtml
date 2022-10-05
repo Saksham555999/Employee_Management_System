@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "HRRegistration";
+    Layout = "~/Views/shared/Home_template.cshtml";
+}
+
+<h2 style="margin-left:100px;">HR Registration</h2>
+<script src="~/Views/Home/hr.js"></script>
+@*<script>
+    $("#pass").validate({
+        rules: {
+            password: "required",
+            comfirm_password: {
+                equalTo: "#password"
+            }
+        }, messages: {
+            password: {
+                required: "Please provide a password"
+            },
+
+            confirm_password: {
+                required: "Please provide a password",
+                equalTo: "Wrong Password"
+            }
+        }
+        });
+</script>*@
+<body>
+    <div>
+        <form method="post" style="margin-left:100px" id="pass">
+            <label>Enter UserName</label><input type="text" name="hrname" class="form-control input_pass" style="width:300px" required /> <br />
+            <label>Enter password</label><input type="password" name="password" id="pass" class="form-control input_pass" style="width:300px" required /> <br />
+            
+            <label> Email ID </label><input type="text" name="mailid" class="form-control input_pass" style="width:300px" required /><br />
+
+            <input type="submit" value="Register" />
+        </form>
+    </div>
+</body>
+@ViewData["a"]<br />
+@ViewData["b"]<br />
+@ViewData["error"]<br />

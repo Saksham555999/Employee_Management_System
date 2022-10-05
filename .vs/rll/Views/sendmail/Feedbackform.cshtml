@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Feedbackform";
+    Layout = "~/Views/shared/Manager_template.cshtml";
+}
+
+<h2>Feedbackform</h2>
+
+<body>
+    <div>
+        <form method="post" style="margin-left:100px">
+            <label> Employee Id</label><input type="text" class="form-control input_pass"style="width:300px" name="empid" required /> <br /> <br />
+            <label> Course id </label><input type="text" class="form-control input_pass"style="width:300px" name="courseid" required /> <br /> <br />
+            <h1>Rate Below From 1 to 5</h1> <br /> <br />
+            <label> How confident do you feel about applying the skills and knowledge gained through this training?</label><input type="text" name="q1" class="form-control input_pass"style="width:300px" required /> <br /> <br />
+            <label> Training included a mix of exercises & interactions.</label><input type="text" name="q2" class="form-control input_pass"style="width:300px" required /> <br /> <br />
+            <label> Involved sufficient time on each topic.</label><input type="text" name="q3" class="form-control input_pass"style="width:300px" required /><br /> <br />
+            <label> I felt encouraged to participate through out the session.</label><input type="text" name="q4" class="form-control input_pass"style="width:300px" required /><br /> <br />
+            <label> I was allowed to ask questions and air concerns.</label><input type="text" name="q5" class="form-control input_pass"style="width:300px" required /><br /> <br />
+            
+
+            <label>Additional Comments, if any ?</label> <br />
+            <textarea name="Description" rows="5" cols="30"></textarea> <br /> <br />
+
+            <input type="submit" value="Submit Form" class="btn-primary" /> <br /> <br />
+        </form>
+    </div>
+</body>
+@ViewData["a"]
+@ViewData["b"]
+

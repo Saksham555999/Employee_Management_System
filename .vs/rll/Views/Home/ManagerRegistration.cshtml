@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "ManagerRegistration";
+    Layout = "~/Views/shared/Home_template.cshtml";
+}
+
+<h2 style="margin-left:100px;">ManagerRegistration</h2>
+
+<body>
+    <div>
+        <form method="post" style="margin-left:100px">
+            <label>Enter Your Name</label><input type="text" name="managername" class="form-control input_pass"style="width:300px" required/> <br /><br />
+            <label>Enter Password </label><input type="password" name="password" class="form-control input_pass"style="width:300px" required/> <br /><br />
+            <label>Email id</label><input type="text" name="mailid" class="form-control input_pass"style="width:300px" required/> <br /><br />
+            @*<label> Enter Department id</label><input type="text" name="deptid" /> <br /><br />*@
+            <label> Enter Department Name </label><input type="text" name="deptname" class="form-control input_pass"style="width:300px" required/> <br /><br />
+
+            <input type="submit" value="Register" class="form-control input_pass"style="width:300px" /> <br /><br />
+        </form>
+        @ViewData["a"]<br />
+        @ViewData["b"]<br />
+        @ViewData["c"]<br />
+        @ViewData["error"]<br />
+    </div>
+</body>

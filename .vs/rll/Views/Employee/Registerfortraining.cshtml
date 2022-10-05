@@ -1,0 +1,35 @@
+﻿@model List<Bussiness_Entities.Training>
+@{
+    ViewBag.Title = "Registerfortraining";
+    Layout = "~/Views/shared/Employee_template.cshtml";
+}
+
+
+
+<table border="1" style="border-collapse:collapse;width:60%;align-content:center" align="center" class="table" >
+    <tr>
+        <th>CourseId</th>
+        <th>StartDate</th>
+        <th>EndDate</th>
+        <th>Description</th>
+        <th></th>
+    </tr>
+    @{
+        foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Coursenameid</td>
+                <td>@item.Startdate.ToShortDateString()</td>
+                <td>@item.Enddate.ToShortDateString()</td>
+                <td>@item.Description</td>
+                <td>@Html.ActionLink("Register for Training", "Register", new { courseid = item.Courseid })</td>
+
+
+            </tr>
+        }
+    }
+</table>
+
+@ViewData["error"]
+
+

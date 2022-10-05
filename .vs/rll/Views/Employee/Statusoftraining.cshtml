@@ -1,0 +1,31 @@
+﻿@model List<Bussiness_Entities.Employeetrainingnew>
+@{
+    ViewBag.Title = "Statusoftraining";
+    Layout = "~/Views/shared/Employee_template.cshtml";
+}
+
+
+
+
+<table border="1" style="border-collapse:collapse; width: 60%; align-content: center" align="center" class="table" >
+    <tr>
+        <td>Course:ID</td>
+        <td>Status:</td>
+        <td>Employee:ID</td>
+        <td></td>
+    </tr>
+    @{
+        foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Courseid</td>
+                <td>@item.Status</td>
+                <td>@item.Employeeid</td>
+                <td>@Html.ActionLink("Cancel Training","cancel",new { empid=item.Employeeid,courseid=item.Courseid})</td>
+            </tr>
+        }
+    }
+</table>
+
+
+

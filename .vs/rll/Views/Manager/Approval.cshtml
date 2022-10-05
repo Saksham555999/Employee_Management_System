@@ -1,0 +1,33 @@
+﻿@model List<Bussiness_Entities.Employeetrainingnew>
+@{
+    ViewBag.Title = "Approval";
+    Layout = "~/Views/shared/Manager_template.cshtml";
+}
+
+<h2>Approval</h2>
+
+<table border="1" style="border-collapse:collapse ; width: 60%; align-content: center" align="center" class="table">
+    <tr>
+        <th>Employeeid</th>
+        <th>Courseid</th>
+        <th>Status</th>
+        <th>Approve</th>
+        <th>Reject</th>
+    </tr>
+    @{
+        foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Employeeid</td>
+                <td>@item.Courseid</td>
+                <td>@item.Status</td>
+                <td>@Html.ActionLink("Approve", "Approve", new { Status = item.Status,employeeid=item.Employeeid})</td>
+                <td>@Html.ActionLink("Reject", "Reject", new { Status = item.Status,employeeid=item.Employeeid })</td>
+                
+            </tr>
+        }
+    }
+</table>
+<br />
+<br />
+

@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+
+<html>
+<style>
+    .x {
+        font-size: 20px;
+        text-decoration: none;
+        border: solid;
+        border-color: red;
+        color: #808080;
+    }
+
+        .x:hover {
+            font-size: 20px;
+            color: #f00;
+            text-decoration: none;
+        }
+
+        .x:active {
+            font-size: 20px;
+            text-decoration: none;
+            color: #000;
+        }
+</style>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/content/bootstrap-5.1.1-dist/css/bootstrap.css" rel="stylesheet" />
+    <script src="~/content/bootstrap-5.1.1-dist/js/bootstrap.js"></script>
+</head>
+
+<body>
+    <img src="~/images/hr.jpg" style="height:200px;width:100%" />
+    <a href="addcourses" class="x">Add Courses</a>
+    <a href="displaytraining" class="x">Display Training</a>
+    <a href="Logout" class="x">Logout</a>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>

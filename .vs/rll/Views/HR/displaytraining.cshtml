@@ -1,0 +1,52 @@
+﻿@{
+    ViewBag.Title = "displaytraining";
+    Layout = "~/Views/shared/HR_template.cshtml";
+}
+
+
+<table border="1" class="table" style="border-collapse:collapse;width:60%;align-content:center" align="center">
+    <tr>
+        <th>Batch No.</th>
+        <th>StartDate</th>
+        <th>EndDate</th>
+        <th>Description</th>
+        <th></th>
+    </tr>
+    @{
+
+        foreach (var item in ViewBag.table1)
+        {
+            <tr>
+                <td>@item.Courseid</td>
+                <td>@item.Startdate.ToShortDateString()</td>
+                <td>@item.Enddate.ToShortDateString()</td>
+                <td>@item.Description</td>
+                <td>@Html.ActionLink("remove","remove",new { coursenameid=item.Coursenameid,courseid=item.Courseid})</td>
+            </tr>
+         
+        }
+            
+
+     }
+    </table>
+@Session["error123"]
+<br /><br /><br />
+<table border="1" class="table" style="border-collapse: collapse;width:40%;align-content:center;" align="center">
+    <tr>
+        <th>Courseid</th>
+        <th>CourseName</th>
+    </tr>
+    
+        @foreach (var item in ViewBag.table2)
+        {
+         <tr>
+            <td>@item.Coursenameid</td>
+            <td>@item.Coursename1</td>
+         </tr>
+        }
+
+</table>
+
+
+
+

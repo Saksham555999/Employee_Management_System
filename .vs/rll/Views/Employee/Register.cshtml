@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/shared/Employee_template.cshtml";
+}
+
+
+
+<form method="post" style="margin-left:100px">
+    <label>Enter Employee ID</label><input type="text" name="employeeid" value="@Session["Employee"].ToString()" class="form-control input_pass"style="width:300px" required/><br /><br />
+    <label>Enter Course ID</label><input type="text" name="courseid" value="@TempData["courseid"]" class="form-control input_pass"style="width:300px" required/><br /><br />
+    <label>Status:</label>@ViewData["status"]<br /><br />
+    <input type="submit" value="Register" class="btn-primary"/>
+</form>
+
+
+

@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/shared/Home_template.cshtml";
+}
+
+
+
+<body>
+    <div>
+        <form method="post" style="margin-left:100px">
+            <label>Enter userId</label><input type="text" name="userid" class="form-control input_pass" style="width:300px" required/> <br /><br />
+            <label>Enter password</label><input type="password" name="password" class="form-control input_pass"style="width:300px" required /> <br /><br />
+            <select name="dropdown" class="dropdown">
+                <option value="HR">HR</option>
+                <option value="Manager">Manager</option>
+                <option value="Employee">Employee</option>
+            </select>
+            <br /><br />
+            <input type="submit" value="login" class="form-control input_pass"style="width:300px"/>
+        </form>
+       
+    </div>
+</body>
+

@@ -1,0 +1,40 @@
+﻿@model List<Bussiness_Entities.Attendance>
+@{
+    ViewBag.Title = "EmployeeAttendance";
+    Layout = "~/Views/shared/Manager_template.cshtml";
+}
+
+
+
+<form method="post">
+    <input type="datetime-local" name="Date" required/><br /><br />
+    <input type="submit" value="Get Attendence" />
+</form>
+<br /><br />
+
+    @if(ViewBag.a!=null)
+     {
+            <table border="1" class="table" style="border-collapse:collapse;width:60%;align-content:center" align="center">
+                <tr>
+                    <td>Employee Id</td>
+                    <td>Date</td>
+                    <td>Courseid</td>
+                    <td>Status</td>
+                    
+                    <td>Send feedback Email</td>
+                </tr>
+
+                @foreach (var item in ViewBag.a)
+                {
+                    <tr>
+                        <td>@item.Employeeid</td>
+                        <td>@item.Date.ToShortDateString()</td>
+                        <td>@item.Courseid</td>
+                        <td>@item.Status</td>
+                        <td>@Html.ActionLink("feedback","feedback",new { employeeid=item.Employeeid })</td>
+                    </tr>
+                 }
+            
+            </table>
+      }
+

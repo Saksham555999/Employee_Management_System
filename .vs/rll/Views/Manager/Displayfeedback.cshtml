@@ -1,0 +1,51 @@
+﻿@model List<Bussiness_Entities.Feedback>
+@{
+    ViewBag.Title = "Displayfeedback";
+    Layout = "~/Views/shared/Manager_template.cshtml";
+}
+
+
+
+<form method="post">
+    <label>Enter Appropriate ID</label><input type="text" name="value" class="form-control input_pass"style="width:300px" required /> <br /> <br />
+    <select name="dropdown" required>
+        <option>Course ID</option>
+        <option>Employee ID</option>
+    </select>
+    <br /> <br />
+    <input type="submit" value="submit" class="btn-primary"/>
+</form>
+<br />
+<br />
+
+
+@if (ViewBag.a != null)
+{
+<table border="1" class="table" style="border-collapse:collapse;width:60%;align-content:center" align="center">
+    <tr>
+        <td>Employee ID</td>
+        <td>Course ID</td>
+        <td>Comments</td>
+        <td>Question 1</td>
+        <td>Question 2</td>
+        <td>Question 3</td>
+        <td>Question 4</td>
+        <td>Question 5</td>
+
+    </tr>
+
+    @foreach (var item in ViewBag.a)
+    {
+<tr>
+    <td>@item.Employeeid</td>
+    <td>@item.Courseid</td>
+    <td>@item.Description</td>
+    <td>@item.Question1</td>
+    <td>@item.Question2</td>
+    <td>@item.Question3</td>
+    <td>@item.Question4</td>
+    <td>@item.Question5</td>
+</tr>}
+
+</table>}
+@ViewData["error"]

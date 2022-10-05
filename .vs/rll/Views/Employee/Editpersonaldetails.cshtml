@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "Editpersonaldetails";
+    Layout = "~/Views/shared/Employee_template.cshtml";
+}
+
+
+
+
+<form method="post" style="margin-left:100px">
+    <label>Enter your employee id</label><input type="text" class="form-control input_pass"style="width:300px" value="@Session["Employee"].ToString()" name="Employeeid" /><br /><br />
+
+    <label>Enter new phone no.</label><input type="text" name="Phonenumber" class="form-control input_pass"style="width:300px" /><br /><br />
+    <label>Enter new address</label><input type="text" name="Address" class="form-control input_pass"style="width:300px" /><br /><br />
+    <label>Enter new Email-id</label><input type="text" name="Emailid" class="form-control input_pass"style="width:300px" /><br /><br />
+
+    <input type="submit" value="submit" class="btn-primary"/>
+</form>
+
+@ViewData["status"]
+@ViewData["error"]
+

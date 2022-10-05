@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c204b90161b94fe6b7a9bbadeeafa837" Name="Diagram1">
+        <EntityTypeShape EntityType="RLL2Model.Attendance" Width="1.5" PointX="7.5" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RLL2Model.Coursename" Width="1.5" PointX="3" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="RLL2Model.Department" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="RLL2Model.Employee" Width="1.5" PointX="5.25" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="RLL2Model.Employeetraining" Width="1.5" PointX="7.5" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="RLL2Model.Feedback" Width="1.5" PointX="7.5" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RLL2Model.HR" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RLL2Model.Manager" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="RLL2Model.Training" Width="1.5" PointX="5.25" PointY="8.5" IsExpanded="true" />
+        <AssociationConnector Association="RLL2Model.FK__Attendanc__Cours__34C8D9D1" ManuallyRouted="false" />
+        <AssociationConnector Association="RLL2Model.FK__Attendanc__Emplo__33D4B598" ManuallyRouted="false" />
+        <AssociationConnector Association="RLL2Model.FK__Training__Course__30F848ED" ManuallyRouted="false" />
+        <AssociationConnector Association="RLL2Model.FK__Manager__Departm__286302EC" ManuallyRouted="false" />
+        <AssociationConnector Association="RLL2Model.FK__Employee__HRid__2C3393D0" ManuallyRouted="false" />
+        <AssociationConnector Association="RLL2Model.FK__Employee__Manage__2B3F6F97" ManuallyRouted="false" />
+        <AssociationConnector Association="RLL2Model.FK__Employeet__Emplo__37A5467C" ManuallyRouted="false" />
+        <AssociationConnector Association="RLL2Model.FK__Feedback__Employ__3B75D760" ManuallyRouted="false" />
+        <AssociationConnector Association="RLL2Model.FK__Employeet__Cours__38996AB5" ManuallyRouted="false" />
+        <AssociationConnector Association="RLL2Model.FK__Feedback__Course__3C69FB99" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="RLL2Model.Employeetrainingnew" Width="1.5" PointX="10.5" PointY="6.75" />
+        <AssociationConnector Association="RLL2Model.FK__Employeet__Emplo__3F466844" />
+        <AssociationConnector Association="RLL2Model.FK__Employeet__Cours__403A8C7D" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

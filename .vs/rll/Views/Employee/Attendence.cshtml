@@ -1,0 +1,16 @@
+﻿@model Bussiness_Entities.Attendance
+@{
+    ViewBag.Title = "Attendence";
+    Layout = "~/Views/shared/Employee_template.cshtml";
+}
+
+
+
+<form method="post" style="margin-left:100px">
+    <label>Employee-ID</label><input type="text" value="@Session["Employee"].ToString()" name="Employeeid" class="form-control input_pass"style="width:300px" required/><br /><br />
+    
+    <label>Course-ID</label><input type="text" name="Courseid" class="form-control input_pass"style="width:300px" required/><br /><br />
+    <label>Status</label>@ViewData["a"]<br /><br />
+    <input type="submit" value="Mark Attendence"class="btn-primary" />
+</form>
+
